@@ -1,0 +1,21 @@
+<script>
+    let employees = [
+        { eId: 101, name: "sanjay", sal: 5000 },
+        { eId: 104, name: "deepak", sal: 8000 },
+        { eId: 103, name: "ranjan", sal: 7000 },
+        { eId: 102, name: "manoj", sal: 9000 },
+        { eId: 101, name: "sanjay", sal: 5000 },
+        { eId: 108, name: "deepak", sal: 5000 },
+    ];
+    let obj = {};
+    for (emp of employees) {
+        let empName = emp['name']; // sanjay / deepak
+        if (obj[empName]) {
+            obj[empName].push(emp);
+        } else {
+            obj[empName] = [];
+            obj[empName].push(emp);
+        }
+    }
+    console.log(obj)
+</script>

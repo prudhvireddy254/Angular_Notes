@@ -1,0 +1,27 @@
+<script>
+  function findLongestWord(str) {
+    var words = str.split(" ");
+    //['the','quick'...]
+
+    var longestWord = "";
+
+    for (word of words) {
+      if (word.length > longestWord.length) {
+        longestWord = word;
+      }
+    }
+
+    return longestWord;
+  }
+  result = findLongestWord("The quick brown fox jumped over the lazy dog");
+  alert(result);
+
+
+  function findLongestWord2(str) {
+    words = str.split(" ");
+    words.sort((a, b) => b.length - a.length);
+    return words[0];
+  }
+  result = findLongestWord2("The quick brown fox jumped over the lazy dog");
+  alert(result);
+</script>

@@ -1,0 +1,21 @@
+<script>
+	let str = "hello world";  
+	let obj = {};
+	for (char of str) {
+		if (obj[char]) {
+			obj[char]++;
+		} else {
+			obj[char] = 1;
+		}
+	}
+
+	let max = 0, maxChar = '';
+	for (let char in obj) {
+		let charCount = obj[char];
+		if (charCount > max) {
+			max = charCount;
+			maxChar = char;
+		}
+	}
+	console.log(maxChar)
+</script>
